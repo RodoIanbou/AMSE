@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app_tp1/écrans/gamesdetails.dart';
 
 class GamesPage extends StatelessWidget {
   const GamesPage({Key? key}) : super(key: key);
@@ -6,26 +7,35 @@ class GamesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Liste des jeux"),
-      ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              title: Text(games[index].title, style: TextStyle(fontSize: 18)),
-              subtitle: Text(games[index].description,
-                  style: TextStyle(fontSize: 10)),
-              leading: ConstrainedBox(
-                constraints: BoxConstraints(),
-                child: Image.asset(games[index].image, fit: BoxFit.cover),
-              ),
-            ),
-          );
-        },
-        itemCount: games.length,
-      ),
-    );
+        body: ListView(
+            padding: const EdgeInsets.all(8),
+            children: List.generate(
+                games.length,
+                (index) => Card(
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    GamesDetail(games[index])),
+                          );
+                        },
+                        child: ListTile(
+                            title: Text(games[index].title,
+                                style: TextStyle(fontSize: 18)),
+                            subtitle: Text(games[index].description,
+                                style: TextStyle(fontSize: 10)),
+                            leading: ConstrainedBox(
+                              constraints: BoxConstraints(),
+                              child: Image.asset(games[index].image,
+                                  fit: BoxFit.cover),
+                            )),
+                      ),
+                    ))));
   }
 }
 
