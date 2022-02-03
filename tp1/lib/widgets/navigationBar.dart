@@ -1,40 +1,23 @@
 import 'package:flutter/material.dart';
+import '../écrans/home.dart';
+import '../écrans/media.dart';
+import '../écrans/about.dart';
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
-
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class NavigBar extends StatefulWidget {
+  const NavigBar({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<NavigBar> createState() => _NavigBar();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _NavigBar extends State<NavigBar> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Games',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Favorites',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: About',
-      style: optionStyle,
-    ),
+  static List<Widget> _widgetOptions = <Widget>[
+    Accueil(),
+    GamesPage(),
+    Info(),
   ];
 
   void _onItemTapped(int index) {
@@ -65,13 +48,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorites',
-            backgroundColor: Colors.purple,
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'About me and the app',
+            label: 'About ',
             backgroundColor: Colors.grey,
           ),
         ],
