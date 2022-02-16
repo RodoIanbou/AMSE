@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import "Exo1.dart";
 import 'Exo2.dart';
 import 'Exo4.dart';
+import 'Exo5a.dart';
+import 'Exo5b.dart';
 
 class Exercice3 extends StatelessWidget {
   @override
@@ -22,6 +24,14 @@ class Exercice3 extends StatelessWidget {
             MenuTile(
                 title: " Exercice 4 : Génération d'une tuile",
                 exercice: Exercice4()),
+            MenuTile(
+                title:
+                    " Exercice 5a : Génération d'un plateau de tuile de couleur ",
+                exercice: Exercice5a()),
+            MenuTile(
+                title:
+                    " Exercice 5b : Séquencage d'une image en un plateau de tuiles",
+                exercice: Exercice5b()),
           ],
         ),
       ),
