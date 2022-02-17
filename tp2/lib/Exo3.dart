@@ -5,6 +5,9 @@ import 'Exo4.dart';
 import 'Exo5a.dart';
 import 'Exo5b.dart';
 
+import 'Exo6a.dart';
+import 'Exo6b.dart';
+
 class Exercice3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,6 +35,12 @@ class Exercice3 extends StatelessWidget {
                 title:
                     " Exercice 5b : Séquencage d'une image en un plateau de tuiles",
                 exercice: Exercice5b()),
+            MenuTile(
+                title: " Exercice 6a : Animation d'une tuile ",
+                exercice: Exercice6a()),
+            MenuTile(
+                title: " Exercice 6b : Ecchange de 2 tuiles dans un plateau ",
+                exercice: Exercice6b()),
           ],
         ),
       ),
