@@ -24,7 +24,7 @@ class _Exercice4State extends State<Exercice4> {
             width: 150.0,
             height: 150.0,
             child: Container(
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(15),
                 child: this.createTileWidgetFrom(tile))),
         Container(
             height: 200,

@@ -8,11 +8,88 @@ class Exercice5b extends StatefulWidget {
   State<Exercice5b> createState() => _Exercice5bState();
 }
 
+class _Exercice5bState extends State<Exercice5b> {
+  List<Tile> tiles = [
+    Tile(
+      alignment: Alignment.topLeft,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.topCenter,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.topRight,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.centerLeft,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.center,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.centerRight,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.bottomLeft,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.bottomCenter,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+    Tile(
+      alignment: Alignment.bottomRight,
+      factor: 0.3,
+      image: 'Images/paysage.jpg',
+    ),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text(
+              "Génération d'un plateau de tuile à partir d'une image"),
+          centerTitle: true,
+        ),
+        body: Container(
+          padding: const EdgeInsets.all(15),
+          child: GridView.count(
+            crossAxisCount: 3,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            children: [
+              tiles[0],
+              tiles[1],
+              tiles[2],
+              tiles[3],
+              tiles[4],
+              tiles[5],
+              tiles[6],
+              tiles[7],
+              tiles[8],
+            ],
+          ),
+        ));
+  }
+}
+
 class Tile extends StatelessWidget {
   String image;
   double factor;
   Alignment alignment;
-  Function()? onTap;
 
   Tile(
       {Key? key,
@@ -33,89 +110,6 @@ class Tile extends StatelessWidget {
           child: Image.asset(image),
         ),
       ),
-    );
-  }
-
-  croppedImageTile() {}
-}
-
-class _Exercice5bState extends State<Exercice5b> {
-  List<Tile> tiles = [
-    Tile(
-      alignment: Alignment.topLeft,
-      factor: 1 / 3,
-      image: 'images/table',
-    ),
-    Tile(
-      alignment: Alignment.topCenter,
-      factor: 1 / 3,
-      image: '',
-    ),
-    Tile(
-      alignment: Alignment.topRight,
-      factor: 1 / 3,
-      image: '',
-    ),
-    Tile(
-      alignment: Alignment.centerLeft,
-      factor: 1 / 3,
-      image: '',
-    ),
-    Tile(
-      alignment: Alignment.center,
-      factor: 1 / 3,
-      image: '',
-    ),
-    Tile(
-      alignment: Alignment.centerRight,
-      factor: 1 / 3,
-      image: '',
-    ),
-    Tile(
-      alignment: Alignment.bottomLeft,
-      factor: 1 / 3,
-      image: '',
-    ),
-    Tile(
-      alignment: Alignment.bottomCenter,
-      factor: 1 / 3,
-      image: '',
-    ),
-    Tile(
-      alignment: Alignment.bottomRight,
-      factor: 1 / 3,
-      image: '',
-    ),
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      child: GridView.count(
-        crossAxisCount: 3,
-        crossAxisSpacing: 3,
-        mainAxisSpacing: 3,
-        children: [
-          createTileWidgetFrom(tiles[0]),
-          createTileWidgetFrom(tiles[1]),
-          createTileWidgetFrom(tiles[2]),
-          createTileWidgetFrom(tiles[3]),
-          createTileWidgetFrom(tiles[4]),
-          createTileWidgetFrom(tiles[5]),
-          createTileWidgetFrom(tiles[6]),
-          createTileWidgetFrom(tiles[7]),
-          createTileWidgetFrom(tiles[8]),
-        ],
-      ),
-    );
-  }
-
-  Widget createTileWidgetFrom(Tile tile) {
-    return InkWell(
-      child: tile.croppedImageTile(),
-      onTap: () {
-        print("tapped on tile");
-      },
     );
   }
 }

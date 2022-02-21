@@ -1,12 +1,14 @@
+import 'package:exo1/Exo5c.dart';
 import 'package:flutter/material.dart';
 import "Exo1.dart";
 import 'Exo2.dart';
 import 'Exo4.dart';
 import 'Exo5a.dart';
 import 'Exo5b.dart';
-
+import 'Exo5c.dart';
 import 'Exo6a.dart';
 import 'Exo6b.dart';
+import 'Exo7.dart';
 
 class Exercice3 extends StatelessWidget {
   @override
@@ -36,11 +38,17 @@ class Exercice3 extends StatelessWidget {
                     " Exercice 5b : Séquencage d'une image en un plateau de tuiles",
                 exercice: Exercice5b()),
             MenuTile(
+                title:
+                    " Exercice 5c : Séquencage d'une image en un plateau de tuile de taille réglable",
+                exercice: Exercice5c()),
+            MenuTile(
                 title: " Exercice 6a : Animation d'une tuile ",
                 exercice: Exercice6a()),
             MenuTile(
-                title: " Exercice 6b : Ecchange de 2 tuiles dans un plateau ",
+                title: " Exercice 6b : Echange de 2 tuiles dans un plateau ",
                 exercice: Exercice6b()),
+            MenuTile(
+                title: "Exercice 7 : Jeu de Tacquin", exercice: Exercice7()),
           ],
         ),
       ),

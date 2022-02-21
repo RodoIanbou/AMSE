@@ -17,9 +17,9 @@ class _Exercice5aState extends State<Exercice5a> {
         ),
         body: GridView.count(
           primary: false,
-          padding: const EdgeInsets.all(20),
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          padding: const EdgeInsets.all(15),
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8,
           crossAxisCount: 3,
           children: [
             Container(

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'Exo1.dart';
-import 'Exo2.dart';
 import 'Exo3.dart';
 
 void main() {

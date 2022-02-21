@@ -39,11 +39,11 @@ class _Exercice2State extends State<Exercice2> {
             decoration: const BoxDecoration(color: Colors.white),
           ),
 
-          //Slider rot X
+          // Rotation selon x
           Container(
             child: Row(
               children: [
-                const Text("Rotate X:"),
+                const Text("Rotation X:"),
                 Expanded(
                   child: Slider(
                     value: rotX,
@@ -61,11 +61,11 @@ class _Exercice2State extends State<Exercice2> {
             padding: const EdgeInsets.all(10),
           ),
 
-          //Slider rot Z
+          // Rotation selon y
           Container(
             child: Row(
               children: [
-                const Text("Rotate Z:"),
+                const Text("Rotation Z:"),
                 Expanded(
                   child: Slider(
                     value: rotZ,
@@ -83,11 +83,11 @@ class _Exercice2State extends State<Exercice2> {
             padding: const EdgeInsets.all(10),
           ),
 
-          //Checkbox mirror
+          //Rotation selon z
           Container(
             child: Row(
               children: [
-                const Text("Mirror:"),
+                const Text("Mirroir:"),
                 Checkbox(
                   value: mirror,
                   onChanged: (bool? value) {
@@ -101,11 +101,11 @@ class _Exercice2State extends State<Exercice2> {
             padding: const EdgeInsets.all(10),
           ),
 
-          //Slider scale
+          //Echelle
           Container(
             child: Row(
               children: [
-                const Text("Scale:"),
+                const Text("Taille:"),
                 Expanded(
                   child: Slider(
                     value: scale,
