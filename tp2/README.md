@@ -18,5 +18,5 @@ This Flutter application takes you through the various steps towards creating a 
 
 
 
-
+ IMPORTANT : Exercice 7 non terminé
 

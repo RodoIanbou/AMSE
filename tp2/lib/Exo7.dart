@@ -12,10 +12,17 @@ class _Exercice7State extends State<Exercice7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Jeu de Tacquin'),
-        centerTitle: true,
-      ),
-    );
+        appBar: AppBar(
+          title: Text('Jeu de Tacquin'),
+          centerTitle: true,
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("Images/travaux.png"),
+              fit: BoxFit.contain,
+            ),
+          ),
+        ));
   }
 }
